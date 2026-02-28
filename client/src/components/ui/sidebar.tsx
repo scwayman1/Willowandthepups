@@ -379,39 +379,3 @@ export const SidebarMenuButton = React.forwardRef<
 });
 SidebarMenuButton.displayName = "SidebarMenuButton";
 
-// Sheet component for mobile sidebar
-const Sheet = ({
-  open,
-  onOpenChange,
-  children,
-}: {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  children: React.ReactNode;
-}) => {
-  if (!open) return null;
-  return (
-    <div className="fixed inset-0 z-50">
-      <div className="fixed inset-0 bg-black/50" onClick={() => onOpenChange(false)} />
-      {children}
-    </div>
-  );
-};
-
-const SheetContent = React.forwardRef<
-  HTMLDivElement,
-  React.ComponentProps<"div"> & { side?: "left" | "right" }
->(({ side = "left", className, children, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "fixed inset-y-0 z-50 flex flex-col bg-background shadow-lg",
-      side === "left" ? "left-0" : "right-0",
-      className
-    )}
-    {...props}
-  >
-    {children}
-  </div>
-));
-SheetContent.displayName = "SheetContent";

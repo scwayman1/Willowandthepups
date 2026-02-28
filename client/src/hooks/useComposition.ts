@@ -1,19 +1,43 @@
 import { useRef, useCallback } from "react";
 
-export function useComposition() {
+interface UseCompositionOptions<T extends HTMLElement> {
+  onKeyDown?: (e: React.KeyboardEvent<T>) => void;
+  onCompositionStart?: (e: React.CompositionEvent<T>) => void;
+  onCompositionEnd?: (e: React.CompositionEvent<T>) => void;
+}
+
+export function useComposition<T extends HTMLElement = HTMLElement>(
+  options?: UseCompositionOptions<T>
+) {
   const isComposing = useRef(false);
 
-  const onCompositionStart = useCallback(() => {
-    isComposing.current = true;
-  }, []);
+  const onCompositionStart = useCallback(
+    (e: React.CompositionEvent<T>) => {
+      isComposing.current = true;
+      options?.onCompositionStart?.(e);
+    },
+    [options?.onCompositionStart]
+  );
 
-  const onCompositionEnd = useCallback(() => {
-    isComposing.current = false;
-  }, []);
+  const onCompositionEnd = useCallback(
+    (e: React.CompositionEvent<T>) => {
+      isComposing.current = false;
+      options?.onCompositionEnd?.(e);
+    },
+    [options?.onCompositionEnd]
+  );
+
+  const onKeyDown = useCallback(
+    (e: React.KeyboardEvent<T>) => {
+      options?.onKeyDown?.(e);
+    },
+    [options?.onKeyDown]
+  );
 
   return {
     isComposing,
     onCompositionStart,
     onCompositionEnd,
+    onKeyDown,
   };
 }

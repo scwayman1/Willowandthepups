@@ -179,8 +179,7 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {puppies?.map((puppy) => {
-                const heartCount =
-                  heartData?.counts?.find((c: { puppyId: number; count: number }) => c.puppyId === puppy.id)?.count ?? 0;
+                const heartCount = heartData?.counts?.[puppy.id] ?? 0;
                 const isHearted = heartData?.visitorHearts?.includes(puppy.id) ?? false;
 
                 return (
