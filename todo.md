@@ -1,0 +1,26 @@
+# Willow Pups — Full-Stack Upgrade TODO
+
+- [x] Upgrade project to web-db-user (database + auth)
+- [x] Create DB schema: applications table, puppies table, weight_logs table, puppy_photos table
+- [x] Seed puppies table with current data
+- [x] Build API routes: POST /api/applications, GET /api/applications (admin), PATCH /api/applications/:id
+- [x] Build API routes: GET /api/puppies, PATCH /api/puppies/:id (admin), POST /api/puppies/:id/photos, POST /api/puppies/:id/weights
+- [x] Build admin dashboard page with Manus OAuth login
+- [x] Admin: view/filter/manage applications (mark as reviewed, contacted, approved, rejected)
+- [x] Admin: update puppy info, add photos, add weight entries
+- [x] Update frontend to POST applications to backend instead of console.log
+- [x] Update narrative: mention SPCA for all adoptions
+- [x] Write vitest tests for all tRPC routes (16 tests passing)
+- [x] Frontend pulls puppy data from DB via tRPC
+- [x] Owner notification on new application submission
+- [ ] Test end-to-end: submit application → see in admin → update status (requires manual login)
+- [x] Add exact birth times to each puppy in the database (Scottie 2/21 7:45PM, Carmel 2/21 8:15PM, Ricochet 2/21 8:45PM, Cloud 2/22 5:45AM, Rusty 2/22 7:30AM, Frankie 2/22 7:45AM)
+- [x] Update frontend age display to show precise age (days + hours) per puppy instead of generic "X days"
+- [x] Add share button (copy link + native share on mobile) in nav and footer
+- [x] Add heart/like button on each puppy card with live counter (no login required)
+- [x] Create puppy_hearts DB table to persist like counts
+- [x] Add tRPC routes for liking a puppy and fetching like counts
+- [x] Fix application form dropdown — confirmed all 6 puppies present (was browser tool extraction issue)
+- [ ] Remove stale "6 days old" hardcoded copy — should only use dynamic age from bornAt
+- [ ] Add humor about unknown sire (dad is a mystery)
+- [ ] Remove any references to Doberman purebred — Willow is Doberman, sire is unknown
