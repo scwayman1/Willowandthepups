@@ -1,9 +1,0 @@
-{
-  "query": "\nUPDATE puppies SET bornAt = '2026-02-22 03:45:00' WHERE slug = 'scottie';\nUPDATE puppies SET bornAt = '2026-02-22 04:15:00' WHERE slug = 'carmel';\nUPDATE puppies SET bornAt = '2026-02-22 04:45:00' WHERE slug = 'ricochet';\nUPDATE puppies SET bornAt = '2026-02-22 13:45:00' WHERE slug = 'cloud';\nUPDATE puppies SET bornAt = '2026-02-22 15:30:00' WHERE slug = 'rusty';\nUPDATE puppies SET bornAt = '2026-02-22 15:45:00' WHERE slug = 'frankie';\n",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2pGxiNThVLMyZ1b.1a2ce0195854 --database cubTCKQneecSbqSJATRBZZ --execute \nUPDATE puppies SET bornAt = '2026-02-22 03:45:00' WHERE slug = 'scottie';\nUPDATE puppies SET bornAt = '2026-02-22 04:15:00' WHERE slug = 'carmel';\nUPDATE puppies SET bornAt = '2026-02-22 04:45:00' WHERE slug = 'ricochet';\nUPDATE puppies SET bornAt = '2026-02-22 13:45:00' WHERE slug = 'cloud';\nUPDATE puppies SET bornAt = '2026-02-22 15:30:00' WHERE slug = 'rusty';\nUPDATE puppies SET bornAt = '2026-02-22 15:45:00' WHERE slug = 'frankie';\n",
-  "rows": [],
-  "messages": [],
-  "stdout": "",
-  "stderr": "",
-  "execution_time_ms": 112
-}
