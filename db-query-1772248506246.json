@@ -1,0 +1,52 @@
+{
+  "query": "SELECT id, puppyId, caption, takenAt FROM puppy_photos ORDER BY puppyId, takenAt DESC;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2pGxiNThVLMyZ1b.1a2ce0195854 --database cubTCKQneecSbqSJATRBZZ --execute SELECT id, puppyId, caption, takenAt FROM puppy_photos ORDER BY puppyId, takenAt DESC;",
+  "rows": [
+    {
+      "id": "1",
+      "puppyId": "1",
+      "caption": "Scottie at a few days old",
+      "takenAt": "2026-02-24 00:00:00"
+    },
+    {
+      "id": "2",
+      "puppyId": "2",
+      "caption": "Carmel at a few days old",
+      "takenAt": "2026-02-24 00:00:00"
+    },
+    {
+      "id": "3",
+      "puppyId": "3",
+      "caption": "Ricochet at a few days old",
+      "takenAt": "2026-02-24 00:00:00"
+    },
+    {
+      "id": "4",
+      "puppyId": "4",
+      "caption": "Cloud at about a week old",
+      "takenAt": "2026-02-27 00:00:00"
+    },
+    {
+      "id": "5",
+      "puppyId": "4",
+      "caption": "Cloud at a few days old",
+      "takenAt": "2026-02-24 00:00:00"
+    },
+    {
+      "id": "6",
+      "puppyId": "5",
+      "caption": "Rusty at a few days old",
+      "takenAt": "2026-02-24 00:00:00"
+    },
+    {
+      "id": "7",
+      "puppyId": "6",
+      "caption": "Frankie at a few days old",
+      "takenAt": "2026-02-24 00:00:00"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tpuppyId\tcaption\ttakenAt\n1\t1\tScottie at a few days old\t2026-02-24 00:00:00\n2\t2\tCarmel at a few days old\t2026-02-24 00:00:00\n3\t3\tRicochet at a few days old\t2026-02-24 00:00:00\n4\t4\tCloud at about a week old\t2026-02-27 00:00:00\n5\t4\tCloud at a few days old\t2026-02-24 00:00:00\n6\t5\tRusty at a few days old\t2026-02-24 00:00:00\n7\t6\tFrankie at a few days old\t2026-02-24 00:00:00\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

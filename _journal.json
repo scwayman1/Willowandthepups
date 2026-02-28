@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1772248037301,
+      "tag": "0000_fine_eternals",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1772248159130,
+      "tag": "0001_lush_mockingbird",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1772249458330,
+      "tag": "0002_strong_chamber",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1772250284398,
+      "tag": "0003_loose_brother_voodoo",
+      "breakpoints": true
+    }
+  ]
+}

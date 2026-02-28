@@ -1,0 +1,52 @@
+{
+  "query": "SELECT id, name, slug, status, birthOrder FROM puppies ORDER BY birthOrder;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2pGxiNThVLMyZ1b.1a2ce0195854 --database cubTCKQneecSbqSJATRBZZ --execute SELECT id, name, slug, status, birthOrder FROM puppies ORDER BY birthOrder;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Scottie",
+      "slug": "scottie",
+      "status": "available",
+      "birthOrder": "1"
+    },
+    {
+      "id": "2",
+      "name": "Carmel",
+      "slug": "carmel",
+      "status": "available",
+      "birthOrder": "2"
+    },
+    {
+      "id": "3",
+      "name": "Ricochet",
+      "slug": "ricochet",
+      "status": "available",
+      "birthOrder": "3"
+    },
+    {
+      "id": "4",
+      "name": "Cloud",
+      "slug": "cloud",
+      "status": "available",
+      "birthOrder": "4"
+    },
+    {
+      "id": "5",
+      "name": "Rusty",
+      "slug": "rusty",
+      "status": "available",
+      "birthOrder": "5"
+    },
+    {
+      "id": "6",
+      "name": "Frankie",
+      "slug": "frankie",
+      "status": "available",
+      "birthOrder": "6"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\tstatus\tbirthOrder\n1\tScottie\tscottie\tavailable\t1\n2\tCarmel\tcarmel\tavailable\t2\n3\tRicochet\tricochet\tavailable\t3\n4\tCloud\tcloud\tavailable\t4\n5\tRusty\trusty\tavailable\t5\n6\tFrankie\tfrankie\tavailable\t6\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

@@ -1,0 +1,76 @@
+{
+  "query": "SELECT id, slug, name, sex, coat, birthWeightGrams, currentWeightGrams, status, birthOrder FROM puppies ORDER BY birthOrder;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2pGxiNThVLMyZ1b.1a2ce0195854 --database cubTCKQneecSbqSJATRBZZ --execute SELECT id, slug, name, sex, coat, birthWeightGrams, currentWeightGrams, status, birthOrder FROM puppies ORDER BY birthOrder;",
+  "rows": [
+    {
+      "id": "1",
+      "slug": "scottie",
+      "name": "Scottie",
+      "sex": "F",
+      "coat": "Black with some rust",
+      "birthWeightGrams": "595",
+      "currentWeightGrams": "920",
+      "status": "available",
+      "birthOrder": "1"
+    },
+    {
+      "id": "2",
+      "slug": "carmel",
+      "name": "Carmel",
+      "sex": "F",
+      "coat": "Red / Rust",
+      "birthWeightGrams": "502",
+      "currentWeightGrams": "786",
+      "status": "available",
+      "birthOrder": "2"
+    },
+    {
+      "id": "3",
+      "slug": "ricochet",
+      "name": "Ricochet",
+      "sex": "M",
+      "coat": "Mix brown / black",
+      "birthWeightGrams": "397",
+      "currentWeightGrams": "673",
+      "status": "available",
+      "birthOrder": "3"
+    },
+    {
+      "id": "4",
+      "slug": "cloud",
+      "name": "Cloud",
+      "sex": "M",
+      "coat": "Brown with white chest patches",
+      "birthWeightGrams": "510",
+      "currentWeightGrams": "760",
+      "status": "available",
+      "birthOrder": "4"
+    },
+    {
+      "id": "5",
+      "slug": "rusty",
+      "name": "Rusty",
+      "sex": "F",
+      "coat": "Red / Rust",
+      "birthWeightGrams": "500",
+      "currentWeightGrams": "790",
+      "status": "available",
+      "birthOrder": "5"
+    },
+    {
+      "id": "6",
+      "slug": "frankie",
+      "name": "Frankie",
+      "sex": "F",
+      "coat": "Mix brown / black",
+      "birthWeightGrams": "550",
+      "currentWeightGrams": "840",
+      "status": "available",
+      "birthOrder": "6"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tslug\tname\tsex\tcoat\tbirthWeightGrams\tcurrentWeightGrams\tstatus\tbirthOrder\n1\tscottie\tScottie\tF\tBlack with some rust\t595\t920\tavailable\t1\n2\tcarmel\tCarmel\tF\tRed / Rust\t502\t786\tavailable\t2\n3\tricochet\tRicochet\tM\tMix brown / black\t397\t673\tavailable\t3\n4\tcloud\tCloud\tM\tBrown with white chest patches\t510\t760\tavailable\t4\n5\trusty\tRusty\tF\tRed / Rust\t500\t790\tavailable\t5\n6\tfrankie\tFrankie\tF\tMix brown / black\t550\t840\tavailable\t6\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

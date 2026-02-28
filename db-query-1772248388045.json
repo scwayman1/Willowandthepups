@@ -1,0 +1,64 @@
+{
+  "query": "SELECT p.id, p.name, p.slug, p.status, p.currentWeightGrams, \n       (SELECT COUNT(*) FROM puppy_photos WHERE puppyId = p.id) as photo_count,\n       (SELECT COUNT(*) FROM weight_logs WHERE puppyId = p.id) as weight_count\nFROM puppies p ORDER BY p.birthOrder;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2pGxiNThVLMyZ1b.1a2ce0195854 --database cubTCKQneecSbqSJATRBZZ --execute SELECT p.id, p.name, p.slug, p.status, p.currentWeightGrams, \n       (SELECT COUNT(*) FROM puppy_photos WHERE puppyId = p.id) as photo_count,\n       (SELECT COUNT(*) FROM weight_logs WHERE puppyId = p.id) as weight_count\nFROM puppies p ORDER BY p.birthOrder;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Scottie",
+      "slug": "scottie",
+      "status": "available",
+      "currentWeightGrams": "920",
+      "photo_count": "1",
+      "weight_count": "2"
+    },
+    {
+      "id": "2",
+      "name": "Carmel",
+      "slug": "carmel",
+      "status": "available",
+      "currentWeightGrams": "786",
+      "photo_count": "1",
+      "weight_count": "2"
+    },
+    {
+      "id": "3",
+      "name": "Ricochet",
+      "slug": "ricochet",
+      "status": "available",
+      "currentWeightGrams": "673",
+      "photo_count": "1",
+      "weight_count": "2"
+    },
+    {
+      "id": "4",
+      "name": "Cloud",
+      "slug": "cloud",
+      "status": "available",
+      "currentWeightGrams": "760",
+      "photo_count": "2",
+      "weight_count": "2"
+    },
+    {
+      "id": "5",
+      "name": "Rusty",
+      "slug": "rusty",
+      "status": "available",
+      "currentWeightGrams": "790",
+      "photo_count": "1",
+      "weight_count": "2"
+    },
+    {
+      "id": "6",
+      "name": "Frankie",
+      "slug": "frankie",
+      "status": "available",
+      "currentWeightGrams": "840",
+      "photo_count": "1",
+      "weight_count": "2"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tslug\tstatus\tcurrentWeightGrams\tphoto_count\tweight_count\n1\tScottie\tscottie\tavailable\t920\t1\t2\n2\tCarmel\tcarmel\tavailable\t786\t1\t2\n3\tRicochet\tricochet\tavailable\t673\t1\t2\n4\tCloud\tcloud\tavailable\t760\t2\t2\n5\tRusty\trusty\tavailable\t790\t1\t2\n6\tFrankie\tfrankie\tavailable\t840\t1\t2\n",
+  "stderr": "",
+  "execution_time_ms": 81
+}
